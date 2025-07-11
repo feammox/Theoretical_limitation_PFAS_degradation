@@ -1,0 +1,139 @@
+; Created by Sobtop (http://sobereva.com/soft/sobtop) Version 1.0(dev3.1) on 2024-03-18
+
+[ atomtypes ]
+; name   at.num      mass       charge   ptype     sigma (nm)    epsilon (kJ/mol)
+s4          16    32.064787    0.000000    A      3.563595E-01    1.046000E+00
+UF_Fe       26    55.845144    0.000000    A      2.594297E-01    5.439200E-02
+
+[ moleculetype ]
+; name          nrexcl
+SF4_opt_freq       3
+
+[ atoms ]
+;  Index   type   residue  resname   atom        cgnr     charge       mass
+     1     s4         1      MOL     S1            1   -0.75256829   32.064787
+     2     s4         1      MOL     S2            2   -0.72549608   32.064787
+     3     s4         1      MOL     S3            3   -0.75993731   32.064787
+     4     s4         1      MOL     S4            4   -0.72532192   32.064787
+     5     UF_Fe      1      MOL     Fe5           5    0.70752249   55.845144
+     6     UF_Fe      1      MOL     Fe6           6    0.77789585   55.845144
+     7     UF_Fe      1      MOL     Fe7           7    0.69996543   55.845144
+     8     UF_Fe      1      MOL     Fe8           8    0.77793983   55.845144
+ 
+[ bonds ]
+; atom_i  atom_j  functype      r0 (nm)    k (kJ/mol/nm^2)
+    1       6         1        0.224309     7.013215E+04     ; S1-Fe6, mSeminario method
+    1       7         1        0.222141     7.376971E+04     ; S1-Fe7, mSeminario method
+    1       8         1        0.224305     7.012933E+04     ; S1-Fe8, mSeminario method
+    2       5         1        0.217601     8.353607E+04     ; S2-Fe5, mSeminario method
+    2       7         1        0.221975     5.703864E+04     ; S2-Fe7, mSeminario method
+    2       8         1        0.224776     6.597811E+04     ; S2-Fe8, mSeminario method
+    3       5         1        0.222845     7.410460E+04     ; S3-Fe5, mSeminario method
+    3       6         1        0.224208     6.897616E+04     ; S3-Fe6, mSeminario method
+    3       8         1        0.224219     6.894359E+04     ; S3-Fe8, mSeminario method
+    4       5         1        0.217605     8.352634E+04     ; S4-Fe5, mSeminario method
+    4       6         1        0.224790     6.594955E+04     ; S4-Fe6, mSeminario method
+    4       7         1        0.221958     5.707925E+04     ; S4-Fe7, mSeminario method
+    5       7         1        0.242232     4.486435E+04     ; Fe5-Fe7, mSeminario method
+ 
+[ angles ]
+; atom_i  atom_j  atom_k  functype    a0 (Deg.)  k (kJ/mol/rad^2)
+    6       1       7         1        82.926      2.789595E+02     ; Fe6-S1-Fe7, mSeminario method
+    6       1       8         1        89.990      3.708015E+02     ; Fe6-S1-Fe8, mSeminario method
+    7       1       8         1        82.935      2.789108E+02     ; Fe7-S1-Fe8, mSeminario method
+    5       2       7         1        66.871      9.026447E+02     ; Fe5-S2-Fe7, mSeminario method
+    5       2       8         1        85.163      2.691416E+02     ; Fe5-S2-Fe8, mSeminario method
+    7       2       8         1        82.865      1.479835E+02     ; Fe7-S2-Fe8, mSeminario method
+    5       3       6         1        84.072      2.817926E+02     ; Fe5-S3-Fe6, mSeminario method
+    5       3       8         1        84.079      2.825335E+02     ; Fe5-S3-Fe8, mSeminario method
+    6       3       8         1        90.038      3.742242E+02     ; Fe6-S3-Fe8, mSeminario method
+    5       4       6         1        85.149      2.689313E+02     ; Fe5-S4-Fe6, mSeminario method
+    5       4       7         1        66.873      9.023268E+02     ; Fe5-S4-Fe7, mSeminario method
+    6       4       7         1        82.857      1.476380E+02     ; Fe6-S4-Fe7, mSeminario method
+    2       5       3         1        95.231      2.173864E+02     ; S2-Fe5-S3, mSeminario method
+    2       5       4         1       114.832      3.908999E+02     ; S2-Fe5-S4, mSeminario method
+    2       5       7         1        57.428     -8.313450E+02     ; S2-Fe5-Fe7, mSeminario method
+    3       5       4         1        95.243      2.175889E+02     ; S3-Fe5-S4, mSeminario method
+    3       5       7         1        98.460      8.493383E+01     ; S3-Fe5-Fe7, mSeminario method
+    4       5       7         1        57.423     -8.306209E+02     ; S4-Fe5-Fe7, mSeminario method
+    1       6       3         1        89.983      3.492821E+02     ; S1-Fe6-S3, mSeminario method
+    1       6       4         1        95.383      2.225019E+02     ; S1-Fe6-S4, mSeminario method
+    3       6       4         1        92.886      2.726927E+02     ; S3-Fe6-S4, mSeminario method
+    1       7       2         1        96.797      1.877764E+02     ; S1-Fe7-S2, mSeminario method
+    1       7       4         1        96.810      1.875210E+02     ; S1-Fe7-S4, mSeminario method
+    1       7       5         1       100.918      2.297444E+02     ; S1-Fe7-Fe5, mSeminario method
+    2       7       4         1       111.388      4.490975E+02     ; S2-Fe7-S4, mSeminario method
+    2       7       5         1        55.701     -7.235157E+02     ; S2-Fe7-Fe5, mSeminario method
+    4       7       5         1        55.704     -7.233264E+02     ; S4-Fe7-Fe5, mSeminario method
+    1       8       2         1        95.380      2.225616E+02     ; S1-Fe8-S2, mSeminario method
+    1       8       3         1        89.981      3.493596E+02     ; S1-Fe8-S3, mSeminario method
+    2       8       3         1        92.874      2.728731E+02     ; S2-Fe8-S3, mSeminario method
+ 
+[ dihedrals ] ; propers
+; atom_i  atom_j  atom_k  atom_l  functype   d0 (Deg.)   k (kJ/mol/rad^2)    ; Case of functype=2
+; atom_i  atom_j  atom_k  atom_l  functype  phase (Deg.)  kd (kJ/mol) pn     ; Case of functype=9
+    1       6       3       5         2        83.365      3.470938E+02      ; S1-Fe6-S3-Fe5, mSeminario method
+    1       6       3       8         2        -0.679      2.786881E+02      ; S1-Fe6-S3-Fe8, mSeminario method
+    1       6       4       5         2       -77.959      5.312938E+02      ; S1-Fe6-S4-Fe5, mSeminario method
+    1       6       4       7         2       -10.704      5.449680E+02      ; S1-Fe6-S4-Fe7, mSeminario method
+    1       7       2       5         2       -98.603      2.748005E+02      ; S1-Fe7-S2-Fe5, mSeminario method
+    1       7       2       8         2       -10.835      2.763620E+02      ; S1-Fe7-S2-Fe8, mSeminario method
+    1       7       4       5         2        98.595      2.747419E+02      ; S1-Fe7-S4-Fe5, mSeminario method
+    1       7       4       6         2        10.839      2.762483E+02      ; S1-Fe7-S4-Fe6, mSeminario method
+    1       7       5       2         2        90.821      1.811613E+02      ; S1-Fe7-Fe5-S2, mSeminario method
+    1       7       5       3         2        -0.001      1.761400E+02      ; S1-Fe7-Fe5-S3, mSeminario method
+    1       7       5       4         2       -90.837      1.810014E+02      ; S1-Fe7-Fe5-S4, mSeminario method
+    1       8       2       5         2        77.951      5.310962E+02      ; S1-Fe8-S2-Fe5, mSeminario method
+    1       8       2       7         2        10.700      5.449097E+02      ; S1-Fe8-S2-Fe7, mSeminario method
+    1       8       3       5         2       -83.358      3.465289E+02      ; S1-Fe8-S3-Fe5, mSeminario method
+    1       8       3       6         2         0.679      2.780443E+02      ; S1-Fe8-S3-Fe6, mSeminario method
+    2       5       3       6         2      -103.124      4.499759E+02      ; S2-Fe5-S3-Fe6, mSeminario method
+    2       5       3       8         2       -12.468      4.503050E+02      ; S2-Fe5-S3-Fe8, mSeminario method
+    2       5       4       6         2        85.833      2.127254E+02      ; S2-Fe5-S4-Fe6, mSeminario method
+    2       5       4       7         2         1.540      1.570486E+02      ; S2-Fe5-S4-Fe7, mSeminario method
+    2       5       7       4         2      -178.342      1.146613E+02      ; S2-Fe5-Fe7-S4, mSeminario method
+    2       7       1       6         2       101.728      4.636685E+02      ; S2-Fe7-S1-Fe6, mSeminario method
+    2       7       1       8         2        10.856      4.633218E+02      ; S2-Fe7-S1-Fe8, mSeminario method
+    2       7       4       5         2        -1.471      1.536495E+02      ; S2-Fe7-S4-Fe5, mSeminario method
+    2       7       4       6         2       -89.227      1.541195E+02      ; S2-Fe7-S4-Fe6, mSeminario method
+    2       7       5       3         2       -90.823      1.127972E+02      ; S2-Fe7-Fe5-S3, mSeminario method
+    2       7       5       4         2       178.342      1.147713E+02      ; S2-Fe7-Fe5-S4, mSeminario method
+    2       8       1       6         2       -93.563      2.637124E+02      ; S2-Fe8-S1-Fe6, mSeminario method
+    2       8       1       7         2       -10.690      2.486387E+02      ; S2-Fe8-S1-Fe7, mSeminario method
+    2       8       3       5         2        12.028      2.274585E+02      ; S2-Fe8-S3-Fe5, mSeminario method
+    2       8       3       6         2        96.064      1.958022E+02      ; S2-Fe8-S3-Fe6, mSeminario method
+    3       5       2       7         2        96.709      1.817396E+02      ; S3-Fe5-S2-Fe7, mSeminario method
+    3       5       2       8         2        12.414      2.599717E+02      ; S3-Fe5-S2-Fe8, mSeminario method
+    3       5       4       6         2       -12.409      2.597584E+02      ; S3-Fe5-S4-Fe6, mSeminario method
+    3       5       4       7         2       -96.701      1.812812E+02      ; S3-Fe5-S4-Fe7, mSeminario method
+    3       5       7       4         2        90.836      1.126291E+02      ; S3-Fe5-Fe7-S4, mSeminario method
+    3       6       1       7         2       -82.203      2.932647E+02      ; S3-Fe6-S1-Fe7, mSeminario method
+    3       6       1       8         2         0.678      3.144325E+02      ; S3-Fe6-S1-Fe8, mSeminario method
+    3       6       4       5         2        12.296      4.796393E+02      ; S3-Fe6-S4-Fe5, mSeminario method
+    3       6       4       7         2        79.551      4.907560E+02      ; S3-Fe6-S4-Fe7, mSeminario method
+    3       8       1       6         2        -0.678      3.146158E+02      ; S3-Fe8-S1-Fe6, mSeminario method
+    3       8       1       7         2        82.194      2.933953E+02      ; S3-Fe8-S1-Fe7, mSeminario method
+    3       8       2       5         2       -12.300      4.798854E+02      ; S3-Fe8-S2-Fe5, mSeminario method
+    3       8       2       7         2       -79.551      4.911352E+02      ; S3-Fe8-S2-Fe7, mSeminario method
+    4       5       2       7         2        -1.540      1.572694E+02      ; S4-Fe5-S2-Fe7, mSeminario method
+    4       5       2       8         2       -85.835      2.126433E+02      ; S4-Fe5-S2-Fe8, mSeminario method
+    4       5       3       6         2        12.464      4.499769E+02      ; S4-Fe5-S3-Fe6, mSeminario method
+    4       5       3       8         2       103.120      4.503059E+02      ; S4-Fe5-S3-Fe8, mSeminario method
+    4       6       1       7         2        10.693      2.485769E+02      ; S4-Fe6-S1-Fe7, mSeminario method
+    4       6       1       8         2        93.575      2.636196E+02      ; S4-Fe6-S1-Fe8, mSeminario method
+    4       6       3       5         2       -12.024      2.274207E+02      ; S4-Fe6-S3-Fe5, mSeminario method
+    4       6       3       8         2       -96.067      1.959128E+02      ; S4-Fe6-S3-Fe8, mSeminario method
+    4       7       1       6         2       -10.861      4.635849E+02      ; S4-Fe7-S1-Fe6, mSeminario method
+    4       7       1       8         2      -101.732      4.632383E+02      ; S4-Fe7-S1-Fe8, mSeminario method
+    4       7       2       5         2         1.471      1.534482E+02      ; S4-Fe7-S2-Fe5, mSeminario method
+    4       7       2       8         2        89.240      1.539339E+02      ; S4-Fe7-S2-Fe8, mSeminario method
+    5       7       1       6         2        45.436     -3.592653E+03      ; Fe5-Fe7-S1-Fe6, mSeminario method
+    5       7       1       8         2       -45.436     -3.613606E+03      ; Fe5-Fe7-S1-Fe8, mSeminario method
+    5       7       2       8         2        87.769      1.947411E+02      ; Fe5-Fe7-S2-Fe8, mSeminario method
+    5       7       4       6         2       -87.756      1.947155E+02      ; Fe5-Fe7-S4-Fe6, mSeminario method
+    6       3       5       7         2       -45.328     -3.780122E+03      ; Fe6-S3-Fe5-Fe7, mSeminario method
+    6       4       5       7         2        84.293      5.800752E+01      ; Fe6-S4-Fe5-Fe7, mSeminario method
+    7       5       2       8         2       -84.295      5.801733E+01      ; Fe7-Fe5-S2-Fe8, mSeminario method
+    7       5       3       8         2        45.328     -3.757058E+03      ; Fe7-Fe5-S3-Fe8, mSeminario method
+
+; No pair needs to generate
